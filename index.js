@@ -1,15 +1,21 @@
 // make an app obj
 import express from "express";
 import {homeRoute, loginRoute, regRoute} from "./routes/index.js";
+import {useDatabase} from "./config/index.js";
+import envi from "dotenv";
+const { config } = envi;
+
 
 const app = express();
+config();
+useDatabase();
 
 //USE
 // parse through data for post requests!!!!!!!!!
 //JSON encoded
-server.use(express.json()); 
+app.use(express.json()); 
 // URL encoded
-server.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 
 
 // my routes
