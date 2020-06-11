@@ -6,7 +6,7 @@ export function loginPost (req,res) {
 	//res.send("post @ login");
 
 	try {
-		 = await dcrypt. compare();
+		 //= await dcrypt. compare();
 	}
 	catch{
 
