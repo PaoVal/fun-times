@@ -7,14 +7,13 @@ const {Schema, model} = mg;
 const PatientSchema = Schema({
 	Name: String,
 	Email: String,
-	Password: String,
-	Password2: String
+	Password1: String,
 });
 
 // encrypt password
 PatientSchema.pre("save", async function () {
-	if(this.isModified("Password")) {
-		this.Password = await bcrypt.hash(this.Password, 10);
+	if(this.isModified("Password1")) {
+		this.Password1 = await bcrypt.hash(this.Password1, 10);
 	}
 })
 
