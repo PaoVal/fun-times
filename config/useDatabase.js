@@ -12,5 +12,3 @@ export default async () => {
 		console.log(error);
 	}
 }
-
-//{ useUnifiedTopology: true }

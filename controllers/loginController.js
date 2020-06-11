@@ -3,5 +3,12 @@ export function loginController (req,res) {
 }
 
 export function loginPost (req,res) {
-	res.send("post @ login");
+	//res.send("post @ login");
+
+	try {
+		 = await dcrypt. compare();
+	}
+	catch{
+
+	}
 }
