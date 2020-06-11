@@ -10,6 +10,7 @@ const PatientSchema = Schema({
 	Password1: String,
 });
 
+
 // encrypt password
 PatientSchema.pre("save", async function () {
 	if(this.isModified("Password1")) {
