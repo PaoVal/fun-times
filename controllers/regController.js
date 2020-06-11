@@ -25,6 +25,10 @@ export async function regPost (req,res) {
 		const patient = await patients.findOne({Email});
 		if (patient) throw "This email is already in use";
 
+		// check if username is repeated
+		const patient = await patients.findOne({Name});
+		if (patient) throw "This username is already in use";
+
 		console.log("check3");
 		// All information is good. Save it to db 
 		const newPatient =
