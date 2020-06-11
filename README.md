@@ -9,7 +9,8 @@ HOW TO RUN:
 >npm i dotenv <br />
 >npm i mongoose <br />
 >npm i dotenv <br />
->npm i bcryptjs
+>npm i bcryptjs <br />
+>npm i @hapi/joi
 
 
 Run it as a user
